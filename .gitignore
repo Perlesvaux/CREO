@@ -5,6 +5,7 @@ packages/*/build/
 
 # Ignore root node_modules
 node_modules/
+package-lock.json
 
 # Ignore OS-specific files
 .DS_Store
