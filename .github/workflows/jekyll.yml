@@ -16,6 +16,18 @@ jobs:
         fetch-depth: 0  # Fetch the entire history to preserve symlinks
         lfs: true       # Enable Git LFS if you're using it
 
+    - name: Recreate symlinks
+      run: |
+        ln -sf ../../../static packages/home-screen/public/static
+        ln -sf ../../../static packages/deeds-screen/public/static
+        ln -sf ../../static packages/site/static
+
+    - name: Debug directory structure
+      run: |
+        ls -l packages/home-screen/public/
+        ls -l packages/deeds-screen/public/
+        ls -l packages/site/
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -38,5 +50,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GH_PAGES_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./packages/site/_site
