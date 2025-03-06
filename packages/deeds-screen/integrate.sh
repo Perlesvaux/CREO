@@ -1,5 +1,5 @@
 #! /bin/bash
-PROJECT_DIRECTORY="../site/assets/deeds-screen/"
+PROJECT_DIRECTORY="../../assets/deeds-screen/"
 COMPONENT_DIRECTORY="./dist/assets/"
 
 cp "$COMPONENT_DIRECTORY"*.js "$PROJECT_DIRECTORY"index.js  && \
