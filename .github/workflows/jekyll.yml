@@ -20,12 +20,13 @@ jobs:
 
       - name: Install Jekyll and dependencies
         run: |
+          cd packages/site  # Change to the Jekyll site directory
           gem install bundler
           bundle install
 
       - name: Build Jekyll site
         run: |
-          cd packages/site
+          cd packages/site  # Change to the Jekyll site directory
           bundle exec jekyll build -d ../../_site
 
       - name: Deploy to GitHub Pages
