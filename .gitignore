@@ -17,3 +17,4 @@ packages/site/.jekyll-metadata
 packages/site/vendor
 packages/site/components
 _site/
+packages/site/Gemfile.lock
