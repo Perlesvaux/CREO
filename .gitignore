@@ -10,6 +10,7 @@ package-lock.json
 # Ignore OS-specific files
 .DS_Store
 
+_site/
 packages/site/_site
 packages/site/.sass-cache
 packages/site/.jekyll-cache
