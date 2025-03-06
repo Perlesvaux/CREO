@@ -60,10 +60,6 @@ plugins:
 #
 banner_image: /assets/images/banner.png
 
-static_files:
-  - source: ../static
-    destination: /
-
 exclude:
   - Gemfile
   - Gemfile.lock
