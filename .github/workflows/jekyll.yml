@@ -13,7 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Fetch all history for .gitmodules and Git LFS
+        fetch-depth: 0  # Fetch the entire history to preserve symlinks
+        lfs: true       # Enable Git LFS if you're using it
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
